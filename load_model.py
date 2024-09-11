@@ -1,4 +1,4 @@
-pip install -r joblib
+pip install -r requirements.txt
 import pandas as pd
 import joblib
 from sklearn.metrics import accuracy_score
