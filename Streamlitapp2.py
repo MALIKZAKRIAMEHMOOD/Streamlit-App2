@@ -15,6 +15,17 @@ st.write(f"Model {accuracy}")
 st.header("Real_Time Prediction")
 
 test_data = pd.read_csv('car data.csv')
+# Assuming 'Car_Name' is the column containing the car names
+car_names = data['Car_Name'].unique()
+
+# Display the car names in the Streamlit app
+st.title('List of Car Names')
+
+# Display car names using st.write
+st.write(car_names)
+
+# Or display car names in a table format
+st.dataframe(car_names)
 
 x_test = test_data.iloc[:, :-1]
 y_test = test_data.iloc[:, -1]
