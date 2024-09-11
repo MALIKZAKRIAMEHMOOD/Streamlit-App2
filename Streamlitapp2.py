@@ -23,8 +23,13 @@ input_data = []
 for col in x_test.columns:
   input_value = st.number_input(f"Input from {col}", value=0.0)
   input_data.append(input_value)
+input_data_y = []
+for cols in y_test.columns:
+  input_value = st. text_input(f"Input from {col}")
+  input_data_y.append(input_value)
 
 input_df = pd.DataFrame([input_data], columns = x_test.columns)
+input_df = pd.DataFrame([input_data_y], columns = y_test.columns)
 
 if st.button("Predict"):
   prediction = model.predict(input_df)
