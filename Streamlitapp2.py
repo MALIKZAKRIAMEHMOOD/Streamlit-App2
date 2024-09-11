@@ -30,6 +30,8 @@ if st.button("Predict"):
   prediction = model.predict(input_df)
 
 st.header("Accuracy Plot")
+st.write(f"Accuracy string: {accuracy}")
+
 # Assuming accuracy is in the form of 'Accuracy: <value>'
 try:
     # Split the accuracy string and safely convert the second part to float
