@@ -9,7 +9,7 @@ model = joblib.load('K-Nearest Neighborsmodel.pkl')
 with open('accuracy.txt', 'r') as file:
   accuracy = file.read()
 
-st.title(f"Model Selection and Real-Time Prediction")
+st.title(f"Car Prediction App")
 st.write(f"Model {accuracy}")
 
 st.header("Real_Time Prediction")
@@ -30,4 +30,4 @@ if st.button("Predict"):
   prediction = model.predict(input_df)
 
 st.header("Accuracy Plot")
-st.bar_chart([float(accuracy.split(': ')[1])])
+st.bar_chart([float(accuracy.split(':')[5])])
