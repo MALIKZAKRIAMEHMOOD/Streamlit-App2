@@ -9,12 +9,12 @@ model = joblib.load('K-Nearest Neighborsmodel.pkl')
 with open('accuracy.txt', 'r') as file:
   accuracy = file.read()
 
-st.title(f"Model Selection and Real-Time Prediction")
+st.title(f"Car Prediction")
 st.write(f"Model {accuracy}")
 
 st.header("Real_Time Prediction")
 
-test_data = pd.read_csv('mobile_price_range_data.csv')
+test_data = pd.read_csv('car data.csv')
 
 x_test = test_data.iloc[:, :-1]
 y_test = test_data.iloc[:, -1]
