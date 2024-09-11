@@ -30,13 +30,5 @@ if st.button("Predict"):
   prediction = model.predict(input_df)
 
 st.header("Accuracy Plot")
-st.write(f"Accuracy string: {accuracy}")
-
-# Assuming accuracy is in the form of 'Accuracy: <value>'
-try:
-    # Split the accuracy string and safely convert the second part to float
-    accuracy_value = float(accuracy.split(':')[1].strip())
+  accuracy_value = float(accuracy.split(':')[1].strip())
     st.bar_chart([accuracy_value])
-except (IndexError, ValueError) as e:
-    st.error(f"An error occurred: {e}")
-    st.write("Accuracy string may be malformed or missing.")
