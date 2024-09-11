@@ -30,5 +30,4 @@ if st.button("Predict"):
   prediction = model.predict(input_df)
 
 st.header("Accuracy Plot")
-  accuracy_value = float(accuracy.split(':')[1].strip())
-    st.bar_chart([accuracy_value])
+st.bar_chart([float(accuracy.split(': ')[1])])
